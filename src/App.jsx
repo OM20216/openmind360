@@ -3,7 +3,7 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Navbar from './components/Navbar'
 import ChatVoiceWidget from './components/ChatVoiceWidget'
-import ServicesOrbit from './components/ServicesOrbit'
+import HeroServiceCollage from './components/HeroServiceCollage'
 import PlaceholderPage from './pages/PlaceholderPage'
 import CaseStudiesPage from './pages/CaseStudiesPage'
 import CareersPage from './pages/CareersPage'
@@ -49,18 +49,18 @@ function HeroSection() {
         backgroundSize: '40px 40px'
       }} />
 
-      {/* Glow behind the ecosystem illustration */}
+      {/* Glow behind the collage graphic */}
       <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[40vw] h-[40vw] max-w-[30rem] max-h-[30rem] bg-gradient-to-br from-ox/15 via-ob/10 to-transparent rounded-full blur-[100px]" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16">
-        {/* Mobile: orbit graphic above the text */}
+        {/* Mobile: collage graphic above the text */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="md:hidden mb-8"
         >
-          <ServicesOrbit className="mx-auto" />
+          <HeroServiceCollage />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
@@ -118,9 +118,9 @@ function HeroSection() {
             initial={{ opacity: 0, scale: 0.95, x: 24 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden md:flex items-start justify-center -mt-8"
+            className="hidden md:flex items-start justify-center pt-4"
           >
-            <ServicesOrbit />
+            <HeroServiceCollage />
           </motion.div>
         </div>
       </div>
